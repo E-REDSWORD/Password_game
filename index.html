@@ -120,7 +120,7 @@
       const tb = document.getElementById("scoreTable"); tb.innerHTML = "";
       players.forEach(p => tb.innerHTML += `<tr><td>${p}</td><td>${scores[p]}</td></tr>`);
     }
-    function nextRound() { currentRound++; currentRound >= maxRounds ? endGame() : startRound(); }
+    function nextRound() { currentRound++; startRound(); }
     function endGame() {
       const ga = document.getElementById("gameArea");
       const w = Object.entries(scores).sort((a, b) => b[1] - a[1])[0];
